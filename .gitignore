@@ -1,0 +1,16 @@
+# Large/local data
+/Data/
+
+# Parquet artifacts
+*.parquet
+
+# Python cache
+__pycache__/
+**/__pycache__/
+*.py[cod]
+*.pyo
+
+# Optional local env/cache
+.venv/
+.env
+.DS_Store

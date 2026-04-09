@@ -1,0 +1,33 @@
+"""
+Factor Template (one factor per file)
+
+Usage:
+1) Copy this file to factors/inbox/<your_factor_name>.py
+2) Implement compute_factor(df)
+3) Run evaluator:
+   python scripts/evaluate_factor.py --factor factors/inbox/<your_factor_name>.py
+
+Requirements:
+- Return a pandas Series with same length/index as input df.
+- Avoid using future data (no look-ahead bias).
+- Keep output numeric.
+"""
+
+from __future__ import annotations
+
+import pandas as pd
+
+# Optional metadata
+FACTOR_NAME = "my_example_factor"
+FACTOR_DESCRIPTION = "Example: normalized close-open spread"
+REQUIRED_COLUMNS = ["open", "close"]
+
+
+def compute_factor(df: pd.DataFrame) -> pd.Series:
+    """Return one numeric Series aligned with df.index."""
+    # Safe denominator to avoid division by zero
+    denom = df["open"].replace(0, pd.NA)
+    factor = (df["close"] - df["open"]) / denom
+
+    # Name is helpful for downstream reports
+    return factor.astype("float64").rename(FACTOR_NAME)

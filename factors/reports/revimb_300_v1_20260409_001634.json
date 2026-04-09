@@ -1,0 +1,41 @@
+{
+  "timestamp": "2026-04-09 00:14:16",
+  "factor_file": "factors/inbox/revimb_300_v1.py",
+  "status": "passed",
+  "reason": [],
+  "factor_name": "revimb_300_v1",
+  "factor_description": "300s reversal pressure: negative 300s log-momentum times 300s taker-buy imbalance mean",
+  "target_col": "log_return",
+  "metrics": {
+    "coverage": 0.9991274650680573,
+    "unique_ratio": 0.9853789551765114,
+    "std": 0.00019106643750604327,
+    "pearson": -0.005230645840540892,
+    "spearman": -0.0036271168582368576,
+    "quantile_spread": -3.759868012937022e-05,
+    "valid_count": 102380987,
+    "total_count": 102470396
+  },
+  "thresholds": {
+    "min_coverage": 0.8,
+    "min_unique_ratio": 0.001,
+    "min_std": 1e-08,
+    "min_abs_spearman": 0.005,
+    "min_abs_pearson": 0.005,
+    "min_quantile_spread": 0.0,
+    "max_abs_corr_with_passed": 0.9
+  },
+  "collinearity_check": [
+    {
+      "other_factor_file": "flowvol_120_v1.py",
+      "other_factor_name": "flowvol_120_v1",
+      "abs_corr": 0.11033741324453897
+    },
+    {
+      "other_factor_file": "momximb_60_v1.py",
+      "other_factor_name": "momximb_60_v1",
+      "abs_corr": 0.2580130263733378
+    }
+  ],
+  "moved_to": "factors/passed/revimb_300_v1.py"
+}

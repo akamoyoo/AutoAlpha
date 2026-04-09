@@ -1,0 +1,30 @@
+{
+  "timestamp": "2026-04-08 23:58:19",
+  "factor_file": "factors/inbox/momximb_60_v1.py",
+  "status": "passed",
+  "reason": [],
+  "factor_name": "momximb_60_v1",
+  "factor_description": "60s log-momentum multiplied by 60s taker-buy volume imbalance mean",
+  "target_col": "log_return",
+  "metrics": {
+    "coverage": 0.999125122928187,
+    "unique_ratio": 0.9678729927610316,
+    "std": 0.00014888397714149894,
+    "pearson": 0.006729230147784916,
+    "spearman": 0.0041156000624221435,
+    "quantile_spread": 6.538540114860495e-05,
+    "valid_count": 102380747,
+    "total_count": 102470396
+  },
+  "thresholds": {
+    "min_coverage": 0.8,
+    "min_unique_ratio": 0.001,
+    "min_std": 1e-08,
+    "min_abs_spearman": 0.005,
+    "min_abs_pearson": 0.005,
+    "min_quantile_spread": 0.0,
+    "max_abs_corr_with_passed": 0.9
+  },
+  "collinearity_check": [],
+  "moved_to": "factors/passed/momximb_60_v1.py"
+}

@@ -1,0 +1,36 @@
+{
+  "timestamp": "2026-04-09 00:06:22",
+  "factor_file": "factors/inbox/flowvol_120_v1.py",
+  "status": "passed",
+  "reason": [],
+  "factor_name": "flowvol_120_v1",
+  "factor_description": "120s signed flow-momentum (ret1s*buy-imbalance) normalized by 120s return volatility",
+  "target_col": "log_return",
+  "metrics": {
+    "coverage": 0.9991253864189223,
+    "unique_ratio": 0.8353766596841707,
+    "std": 9.091170541254282,
+    "pearson": -0.0015708125147519982,
+    "spearman": 0.009398345922537264,
+    "quantile_spread": -5.1227294074461345e-05,
+    "valid_count": 102380774,
+    "total_count": 102470396
+  },
+  "thresholds": {
+    "min_coverage": 0.8,
+    "min_unique_ratio": 0.001,
+    "min_std": 1e-08,
+    "min_abs_spearman": 0.005,
+    "min_abs_pearson": 0.005,
+    "min_quantile_spread": 0.0,
+    "max_abs_corr_with_passed": 0.9
+  },
+  "collinearity_check": [
+    {
+      "other_factor_file": "momximb_60_v1.py",
+      "other_factor_name": "momximb_60_v1",
+      "abs_corr": 0.20105232456153765
+    }
+  ],
+  "moved_to": "factors/passed/flowvol_120_v1.py"
+}

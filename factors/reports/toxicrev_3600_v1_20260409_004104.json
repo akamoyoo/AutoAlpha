@@ -1,0 +1,60 @@
+{
+  "timestamp": "2026-04-09 00:38:45",
+  "factor_file": "factors/inbox/toxicrev_3600_v1.py",
+  "status": "passed",
+  "reason": [],
+  "factor_name": "toxicrev_3600_v1",
+  "factor_description": "3600s order-flow toxicity (abs quote taker-imbalance mean) times 3600s reversal momentum",
+  "target_col": "log_return",
+  "metrics": {
+    "coverage": 0.9991558244783205,
+    "unique_ratio": 0.9811147540560896,
+    "std": 0.003074331906443399,
+    "pearson": 0.013570160647457538,
+    "spearman": 0.046794890139578736,
+    "quantile_spread": 0.00014529342947763293,
+    "valid_count": 102383893,
+    "total_count": 102470396
+  },
+  "thresholds": {
+    "min_coverage": 0.8,
+    "min_unique_ratio": 0.001,
+    "min_std": 1e-08,
+    "min_abs_spearman": 0.005,
+    "min_abs_pearson": 0.005,
+    "min_quantile_spread": 0.0,
+    "max_abs_corr_with_passed": 0.9
+  },
+  "collinearity_check": [
+    {
+      "other_factor_file": "flowvol_120_v1.py",
+      "other_factor_name": "flowvol_120_v1",
+      "abs_corr": 0.02500964594775827,
+      "cache_hit": true
+    },
+    {
+      "other_factor_file": "momximb_60_v1.py",
+      "other_factor_name": "momximb_60_v1",
+      "abs_corr": 0.026397924428961817,
+      "cache_hit": true
+    },
+    {
+      "other_factor_file": "revimb_300_v1.py",
+      "other_factor_name": "revimb_300_v1",
+      "abs_corr": 0.018902361271943464,
+      "cache_hit": true
+    },
+    {
+      "other_factor_file": "toxicrev_300_v1.py",
+      "other_factor_name": "toxicrev_300_v1",
+      "abs_corr": 0.28480694014555097,
+      "cache_hit": true
+    }
+  ],
+  "cache_stats": {
+    "hits": 4,
+    "misses": 0,
+    "writes": 0
+  },
+  "moved_to": "factors/passed/toxicrev_3600_v1.py"
+}
